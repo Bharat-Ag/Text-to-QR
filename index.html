@@ -1,1 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to QR Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Text to QR Code</h1>
+            <p>Write your Secret text here to create QR Code</p>
+        </div>
+        <div class="field">
+            <textarea name="message" id="message" placeholder="Enter Your Secret message"></textarea>
+            <button class="code-btn">Generate QR</button>
+            <button class="reset-btn">Reset Field</button>
+        </div>
+        <div class="qr">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png"
+                width="50%" alt="error">
+        </div>
+    </div>
+</body>
+
+</html>
