@@ -8,7 +8,7 @@
 }
 
 :root {
-    --primary-color: rgb(137, 124, 255);
+    --primary-color: rgb(103, 103, 108);
 }
 
 body {
@@ -17,7 +17,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
+    background: url("./dark-minimalist-05.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 20px;
 }
 
@@ -96,7 +100,7 @@ a {
 }
 
 .container .field .code-btn:active {
-    background-color: rgb(243, 124, 211);
+    background-color: rgb(37, 29, 35);
     scale: .989;
 }
 
