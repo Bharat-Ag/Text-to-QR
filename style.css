@@ -29,13 +29,13 @@ a {
     position: absolute;
     right: 20px;
     font-size: 10px;
-    top: 35px;
+    top: 29px;
     cursor: pointer;
 }
 
 .container {
     position: relative;
-    height: 290px;
+    height: 260px;
     max-width: 410px;
     background: white;
     border-radius: 8px;
@@ -45,12 +45,13 @@ a {
 }
 
 .container.active {
-    height: 500px;
+    height: 465px;
 }
 
 .title h1 {
     position: relative;
     width: max-content;
+    font-size: 25px;
 }
 
 .title h1::after {
@@ -71,7 +72,7 @@ a {
 }
 
 .container .field {
-    margin: 10px 0 35px;
+    margin: 10px 0 20px;
 }
 
 .container .field textarea,
@@ -97,23 +98,23 @@ a {
     margin-bottom: 10px;
     cursor: pointer;
     transition: all .1s;
+    position: relative;
+}
+
+.code-btn::after {
+    position: absolute;
+    content: '';
+    width: 75%;
+    height: 1.5px;
+    background: rgba(0, 0, 0, 0.174);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .container .field .code-btn:active {
     background-color: rgb(37, 29, 35);
     scale: .989;
-}
-
-.container .field .reset-btn {
-    background: none;
-    width: max-content;
-    float: right;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
-.container .field .reset-btn:active {
-    color: rebeccapurple;
 }
 
 .container .qr {
@@ -124,12 +125,22 @@ a {
     outline: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     padding: 20px;
+    opacity: 0;
+    pointer-events: none;
 }
 
+.container.active .qr {
+    opacity: 1;
+    pointer-events: auto;
+}
 
 @media only screen and (max-width:320px) {
     a {
         top: 25px;
+    }
+
+    .container {
+        height: 280px;
     }
 
     .container.active {
@@ -137,7 +148,7 @@ a {
     }
 
     .container .field {
-        margin: 10px 0 30px;
+        margin: 10px 0 25px;
     }
 
     .title h1 {
@@ -153,9 +164,6 @@ a {
         font-size: 15px;
     }
 
-    .container .field .reset-btn {
-        margin-bottom: 0px;
-    }
 }
 
 
@@ -164,8 +172,13 @@ a {
         top: 25px;
     }
 
+    .container {
+        height: 280px;
+
+    }
+
     .container.active {
-        height: 470px;
+        height: 440px;
     }
 
     .title h1 {
@@ -174,7 +187,18 @@ a {
 
     .title p {
         font-size: 12px;
-        margin: 15px 0;
+        margin: 12px 0;
+        line-height: 20px;
     }
+
+    .container .field .reset-btn {
+        margin-bottom: 0px;
+    }
+
+    .container .field .code-btn {
+        font-size: 15px;
+        margin-bottom: 7px;
+    }
+
 
 }
