@@ -18,9 +18,19 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--primary-color);
+    padding: 20px;
+}
+
+a {
+    position: absolute;
+    right: 20px;
+    font-size: 10px;
+    top: 35px;
+    cursor: pointer;
 }
 
 .container {
+    position: relative;
     height: 290px;
     max-width: 410px;
     background: white;
@@ -36,6 +46,7 @@ body {
 
 .title h1 {
     position: relative;
+    width: max-content;
 }
 
 .title h1::after {
@@ -51,8 +62,8 @@ body {
 
 .title p {
     text-transform: capitalize;
-    font-size: 15px;
-    margin: 5px 0 10px;
+    font-size: 13px;
+    margin: 10px 0;
 }
 
 .container .field {
@@ -109,4 +120,61 @@ body {
     outline: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     padding: 20px;
+}
+
+
+@media only screen and (max-width:320px) {
+    a {
+        top: 25px;
+    }
+
+    .container.active {
+        height: 450px;
+    }
+
+    .container .field {
+        margin: 10px 0 30px;
+    }
+
+    .title h1 {
+        font-size: 18px;
+    }
+
+    .title p {
+        font-size: 12px;
+        margin: 15px 0;
+    }
+
+    .container .field .code-btn {
+        font-size: 15px;
+    }
+
+    .container .field .reset-btn {
+        margin-bottom: 0px;
+    }
+}
+
+
+@media (min-width:321px) and (max-width:445px) {
+    body {
+        background-color: red;
+    }
+
+    a {
+        top: 25px;
+    }
+
+    .container.active {
+        height: 470px;
+    }
+
+    .title h1 {
+        font-size: 22px;
+    }
+
+    .title p {
+        font-size: 12px;
+        margin: 15px 0;
+    }
+
 }
