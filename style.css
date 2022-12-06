@@ -178,7 +178,7 @@ a {
     }
 
     .container.active {
-        height: 440px;
+        height: 460px;
     }
 
     .title h1 {
@@ -189,6 +189,8 @@ a {
         font-size: 12px;
         margin: 12px 0;
         line-height: 20px;
+        width: 90%;
+
     }
 
     .container .field .reset-btn {
