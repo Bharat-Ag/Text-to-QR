@@ -12,3 +12,15 @@ getBtn.addEventListener('click', () => {
     qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${inputVale}`;
     container.classList.add("active");
 })
+
+
+getInput.addEventListener('keypress', function (e) {
+    if (e.key === "Enter") {
+        e.preventDefault();
+        let inputVale = getInput.value;
+        if (!inputVale) return;
+        qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${inputVale}`;
+        container.classList.add("active");
+
+    }
+})
