@@ -21,10 +21,17 @@ body {
 }
 
 .container {
+    height: 290px;
+    max-width: 410px;
     background: white;
-    max-width: 420px;
     border-radius: 8px;
     padding: 15px 25px;
+    transition: height .3s ease-out;
+    overflow: hidden;
+}
+
+.container.active {
+    height: 500px;
 }
 
 .title h1 {
@@ -49,7 +56,7 @@ body {
 }
 
 .container .field {
-    margin: 20px 0 15px;
+    margin: 10px 0 35px;
 }
 
 .container .field textarea,
@@ -74,6 +81,12 @@ body {
     font-size: 17px;
     margin-bottom: 10px;
     cursor: pointer;
+    transition: all .1s;
+}
+
+.container .field .code-btn:active {
+    background-color: rgb(243, 124, 211);
+    scale: .989;
 }
 
 .container .field .reset-btn {
@@ -82,9 +95,17 @@ body {
     float: right;
     cursor: pointer;
     margin-bottom: 10px;
-
 }
 
 .container .field .reset-btn:active {
     color: rebeccapurple;
+}
+
+.container .qr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    outline: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 }
