@@ -156,10 +156,6 @@ a {
 
 
 @media (min-width:321px) and (max-width:445px) {
-    body {
-        background-color: red;
-    }
-
     a {
         top: 25px;
     }
